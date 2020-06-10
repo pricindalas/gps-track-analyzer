@@ -1,4 +1,4 @@
-package rokpec.gpstrackanalyzer.tools;
+package com.github.pricindalas.gpstrackanalyzer.tools;
 
 public class Converters {
 

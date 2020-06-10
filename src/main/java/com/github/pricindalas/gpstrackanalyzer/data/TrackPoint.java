@@ -1,4 +1,4 @@
-package rokpec.gpstrackanalyzer.data;
+package com.github.pricindalas.gpstrackanalyzer.data;
 
 import java.util.Date;
 

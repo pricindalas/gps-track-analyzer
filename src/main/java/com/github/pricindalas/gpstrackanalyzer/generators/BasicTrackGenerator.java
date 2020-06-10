@@ -1,8 +1,8 @@
-package rokpec.gpstrackanalyzer.generators;
+package com.github.pricindalas.gpstrackanalyzer.generators;
 
-import rokpec.gpstrackanalyzer.data.Track;
-import rokpec.gpstrackanalyzer.data.TrackPoint;
-import rokpec.gpstrackanalyzer.data.TrackSegment;
+import com.github.pricindalas.gpstrackanalyzer.data.Track;
+import com.github.pricindalas.gpstrackanalyzer.data.TrackPoint;
+import com.github.pricindalas.gpstrackanalyzer.data.TrackSegment;
 
 import java.util.Date;
 import java.util.Random;

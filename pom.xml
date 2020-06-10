@@ -4,9 +4,9 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>rokpec</groupId>
+    <groupId>com.github.pricindalas</groupId>
     <artifactId>gps-track-analyzer</artifactId>
-    <version>1.0</version>
+    <version>1.0-SNAPSHOT</version>
     <build>
         <plugins>
             <plugin>
@@ -19,6 +19,37 @@
             </plugin>
         </plugins>
     </build>
+
+    <name>GPS Track Analyzer</name>
+    <description>Simple and lightweight library for reading and writing GPX files.</description>
+    <url>https://github.com/pricindalas/gps-track-analyzer</url>
+
+    <licenses>
+        <license>
+            <name>MIT License</name>
+            <url>http://www.opensource.org/licenses/mit-license.php</url>
+        </license>
+    </licenses>
+
+    <developers>
+        <developer>
+            <name>Rokas Pečiulis</name>
+            <email>pricindalas@gmail.com</email>
+            <organization>KTU</organization>
+            <organizationUrl>http://www.ktu.edu</organizationUrl>
+        </developer>
+    </developers>
+
+    <scm>
+        <connection>scm:git:git://github.com/pricindalas/gps-track-analyzer.git</connection>
+        <developerConnection>scm:git:ssh://github.com:pricindalas/gps-track-analyzer.git</developerConnection>
+        <url>https://github.com/pricindalas/gps-track-analyzer</url>
+    </scm>
+
+    <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+    </properties>
+
 
 
 </project>

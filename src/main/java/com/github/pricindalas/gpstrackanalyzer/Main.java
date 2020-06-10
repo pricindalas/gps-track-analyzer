@@ -1,13 +1,13 @@
-package rokpec.gpstrackanalyzer;
+package com.github.pricindalas.gpstrackanalyzer;
 
-import rokpec.gpstrackanalyzer.data.Track;
-import rokpec.gpstrackanalyzer.data.TrackSummary;
-import rokpec.gpstrackanalyzer.generators.BasicTrackGenerator;
-import rokpec.gpstrackanalyzer.io.GpxFileReader;
-import rokpec.gpstrackanalyzer.io.GpxFileWriter;
-import rokpec.gpstrackanalyzer.io.TrackFileReader;
-import rokpec.gpstrackanalyzer.io.TrackFileWriter;
-import rokpec.gpstrackanalyzer.tools.Summaries;
+import com.github.pricindalas.gpstrackanalyzer.data.Track;
+import com.github.pricindalas.gpstrackanalyzer.data.TrackSummary;
+import com.github.pricindalas.gpstrackanalyzer.io.GpxFileReader;
+import com.github.pricindalas.gpstrackanalyzer.io.TrackFileReader;
+import com.github.pricindalas.gpstrackanalyzer.io.TrackFileWriter;
+import com.github.pricindalas.gpstrackanalyzer.tools.Summaries;
+import com.github.pricindalas.gpstrackanalyzer.generators.BasicTrackGenerator;
+import com.github.pricindalas.gpstrackanalyzer.io.GpxFileWriter;
 
 public class Main {
     public static void main(String[] args) {

@@ -1,8 +1,8 @@
-package rokpec.gpstrackanalyzer.io;
+package com.github.pricindalas.gpstrackanalyzer.io;
 
+import com.github.pricindalas.gpstrackanalyzer.data.Track;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
-import rokpec.gpstrackanalyzer.data.Track;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;

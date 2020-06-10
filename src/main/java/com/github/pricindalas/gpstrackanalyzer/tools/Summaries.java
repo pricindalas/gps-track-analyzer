@@ -1,8 +1,8 @@
-package rokpec.gpstrackanalyzer.tools;
+package com.github.pricindalas.gpstrackanalyzer.tools;
 
-import rokpec.gpstrackanalyzer.data.Track;
-import rokpec.gpstrackanalyzer.data.TrackPoint;
-import rokpec.gpstrackanalyzer.data.TrackSummary;
+import com.github.pricindalas.gpstrackanalyzer.data.Track;
+import com.github.pricindalas.gpstrackanalyzer.data.TrackPoint;
+import com.github.pricindalas.gpstrackanalyzer.data.TrackSummary;
 
 public class Summaries {
 

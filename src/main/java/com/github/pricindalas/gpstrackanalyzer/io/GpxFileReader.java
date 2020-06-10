@@ -1,13 +1,13 @@
-package rokpec.gpstrackanalyzer.io;
+package com.github.pricindalas.gpstrackanalyzer.io;
 
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-import rokpec.gpstrackanalyzer.data.Track;
-import rokpec.gpstrackanalyzer.data.TrackPoint;
-import rokpec.gpstrackanalyzer.data.TrackSegment;
+import com.github.pricindalas.gpstrackanalyzer.data.Track;
+import com.github.pricindalas.gpstrackanalyzer.data.TrackPoint;
+import com.github.pricindalas.gpstrackanalyzer.data.TrackSegment;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
