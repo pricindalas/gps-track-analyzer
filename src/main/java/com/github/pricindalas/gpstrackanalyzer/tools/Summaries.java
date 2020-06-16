@@ -4,8 +4,16 @@ import com.github.pricindalas.gpstrackanalyzer.data.Track;
 import com.github.pricindalas.gpstrackanalyzer.data.TrackPoint;
 import com.github.pricindalas.gpstrackanalyzer.data.TrackSummary;
 
+/**
+ * This class is for creating summaries of track data structures.
+ */
 public class Summaries {
 
+    /**
+     * Creates a track summary from the given track data.
+     * @param track Track data structure.
+     * @return Track summary object with filled data.
+     */
     public static TrackSummary generateTrackSummary(Track track) {
 
         TrackSummary summary = new TrackSummary();

@@ -1,13 +1,13 @@
 package com.github.pricindalas.gpstrackanalyzer.io;
 
+import com.github.pricindalas.gpstrackanalyzer.data.Track;
+import com.github.pricindalas.gpstrackanalyzer.data.TrackPoint;
+import com.github.pricindalas.gpstrackanalyzer.data.TrackSegment;
 import org.w3c.dom.Document;
 import org.w3c.dom.Element;
 import org.w3c.dom.Node;
 import org.w3c.dom.NodeList;
 import org.xml.sax.SAXException;
-import com.github.pricindalas.gpstrackanalyzer.data.Track;
-import com.github.pricindalas.gpstrackanalyzer.data.TrackPoint;
-import com.github.pricindalas.gpstrackanalyzer.data.TrackSegment;
 
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
@@ -21,6 +21,9 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+/**
+ * This class is used for reading GPX format files to GPS track records.
+ */
 public class GpxFileReader extends TrackFileReader {
 
     private static final SimpleDateFormat sdf1 = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
@@ -28,6 +31,10 @@ public class GpxFileReader extends TrackFileReader {
 
     private final File gpxFile;
 
+    /**
+     * Creates a new GPX file reader object with given GPX file path.
+     * @param path The path to GPX file.
+     */
     public GpxFileReader(String path) {
         gpxFile = new File(path);
 
@@ -38,6 +45,10 @@ public class GpxFileReader extends TrackFileReader {
         }
     }
 
+    /**
+     * Reads the file and creates a GPS track object from read data.
+     * @return GPS track object with data.
+     */
     public Track readData() {
 
         Track track = new Track();
@@ -102,17 +113,18 @@ public class GpxFileReader extends TrackFileReader {
                 }
             }
 
-        } catch (SAXException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        } catch (ParserConfigurationException e) {
+        } catch (SAXException | IOException | ParserConfigurationException e) {
             e.printStackTrace();
         }
 
         return track;
     }
 
+    /**
+     * This method creates a NodeList to actual iterable Node list for easier iteration while reading GPX file data.
+     * @param nodeList the NodeList object to be read.
+     * @return Iterable list of the Node objects.
+     */
     private static List<Node> toNodeList(NodeList nodeList) {
         List<Node> nodes = new ArrayList<>();
 
@@ -123,6 +135,11 @@ public class GpxFileReader extends TrackFileReader {
         return nodes;
     }
 
+    /**
+     * Parses data from string. There might be different date formats in GPX file so we have to have these defined.
+     * @param value String of a date value.
+     * @return Date object or null if the parse is failed.
+     */
     private Date parseDate(String value) {
         Date date = null;
 

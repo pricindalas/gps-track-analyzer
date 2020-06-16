@@ -7,19 +7,29 @@ import org.w3c.dom.Element;
 import javax.xml.parsers.DocumentBuilder;
 import javax.xml.parsers.DocumentBuilderFactory;
 import javax.xml.parsers.ParserConfigurationException;
-import javax.xml.transform.*;
+import javax.xml.transform.OutputKeys;
+import javax.xml.transform.Transformer;
+import javax.xml.transform.TransformerException;
+import javax.xml.transform.TransformerFactory;
 import javax.xml.transform.dom.DOMSource;
 import javax.xml.transform.stream.StreamResult;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Locale;
 
+/**
+ * This class is for writing GPS track data to GPX file format.
+ */
 public class GpxFileWriter extends TrackFileWriter {
 
     private static final SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss'Z'");
 
     private final File gpxFile;
 
+    /**
+     * Creates a new GPX file writer for a given file path.
+     * @param path File path to write the GPX file.
+     */
     public GpxFileWriter(String path) {
 
         gpxFile = new File(path);
@@ -29,6 +39,10 @@ public class GpxFileWriter extends TrackFileWriter {
         }
     }
 
+    /**
+     * Writes the track data to GPX file.
+     * @param track GPS track data.
+     */
     public void writeData(Track track) {
 
         DocumentBuilderFactory dbFactory = DocumentBuilderFactory.newInstance();
@@ -85,11 +99,7 @@ public class GpxFileWriter extends TrackFileWriter {
             transformer.transform(source, console);
             transformer.transform(source, file);
 
-        } catch (ParserConfigurationException e) {
-            e.printStackTrace();
-        } catch (TransformerConfigurationException e) {
-            e.printStackTrace();
-        } catch (TransformerException e) {
+        } catch (ParserConfigurationException | TransformerException e) {
             e.printStackTrace();
         }
 
